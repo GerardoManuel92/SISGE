@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gmgv_.DESKTOP-5TKM0PP/Documents/NetBeansProjects/SISGE/src/Interfaces/FrmUsuarios.java</file>
-            <file>file:/C:/Users/gmgv_.DESKTOP-5TKM0PP/Documents/NetBeansProjects/SISGE/src/Interfaces/FrmLogin.java</file>
-            <file>file:/C:/Users/gmgv_.DESKTOP-5TKM0PP/Documents/NetBeansProjects/SISGE/src/sisge/SISGE.java</file>
-            <file>file:/C:/Users/gmgv_.DESKTOP-5TKM0PP/Documents/NetBeansProjects/SISGE/src/Interfaces/FrmAlumnos.java</file>
+            <file>file:/C:/Users/gmgv_/OneDrive/Documentos/NetBeansProjects/SISGE/src/sisge/SISGE.java</file>
+            <file>file:/C:/Users/gmgv_/OneDrive/Documentos/NetBeansProjects/SISGE/src/Interfaces/FrmPrincipalEncargado.java</file>
+            <file>file:/C:/Users/gmgv_/OneDrive/Documentos/NetBeansProjects/SISGE/src/Interfaces/FrmLogin.java</file>
+            <file>file:/C:/Users/gmgv_/OneDrive/Documentos/NetBeansProjects/SISGE/src/Interfaces/FrmUsuarios.java</file>
+            <file>file:/C:/Users/gmgv_/OneDrive/Documentos/NetBeansProjects/SISGE/src/conexion/Conectar.java</file>
         </group>
     </open-files>
 </project-private>

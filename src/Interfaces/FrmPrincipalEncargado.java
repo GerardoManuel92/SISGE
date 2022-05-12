@@ -8,6 +8,7 @@ import java.awt.BorderLayout;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,6 +39,7 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
         lbl_nombre = new javax.swing.JLabel();
         btn_generar = new javax.swing.JButton();
         btn_generar1 = new javax.swing.JButton();
+        btn_generar2 = new javax.swing.JButton();
         escritorio = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,6 +64,17 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
             }
         });
 
+        btn_generar2.setBackground(new java.awt.Color(0, 204, 204));
+        btn_generar2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btn_generar2.setForeground(new java.awt.Color(255, 255, 255));
+        btn_generar2.setText("CERRAR SESION");
+        btn_generar2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btn_generar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_generar2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -79,7 +92,10 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btn_generar1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_generar1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(btn_generar2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -93,7 +109,9 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
                 .addComponent(btn_generar)
                 .addGap(18, 18, 18)
                 .addComponent(btn_generar1)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
+                .addComponent(btn_generar2)
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
@@ -104,7 +122,7 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 455, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -114,18 +132,19 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(12, 12, 12))
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -162,6 +181,22 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
             Logger.getLogger(FrmPrincipalEncargado.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btn_generar1ActionPerformed
+
+    private void btn_generar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generar2ActionPerformed
+        int s = JOptionPane.showConfirmDialog(null, "¿Deseas cerrar tu sesion?", "CONFIRMACION", 0);
+        if (s == 0) {
+            JOptionPane.showMessageDialog(null, "Sesion finalizada");
+
+            try {
+                FrmLogin login = new FrmLogin();
+                login.setVisible(true);
+                this.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(FrmUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+    }//GEN-LAST:event_btn_generar2ActionPerformed
 
     
     
@@ -207,6 +242,7 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_generar;
     private javax.swing.JButton btn_generar1;
+    private javax.swing.JButton btn_generar2;
     private javax.swing.JPanel escritorio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
