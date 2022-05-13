@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -41,6 +41,9 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
         escritorio = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("ENCARGADO");
 
@@ -95,6 +98,8 @@ public class FrmPrincipalEncargado extends javax.swing.JFrame {
                 .addComponent(btn_generar1)
                 .addContainerGap(231, Short.MAX_VALUE))
         );
+
+        escritorio.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);

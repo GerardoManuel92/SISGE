@@ -110,7 +110,7 @@ public class FrmLogin extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel12.setText("SISTEMA DE GESTION ");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Rectangle 85.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
@@ -220,7 +220,7 @@ public class FrmLogin extends javax.swing.JFrame {
     public void Logueo(String usuario, String password) {
         try {
 
-            String sql = "SELECT * FROM usuarios WHERE usuario='" + usuario + "' and password='" + password + "'";
+            String sql = "SELECT * FROM usuario WHERE usuario='" + usuario + "' and password='" + password + "'";
             st = conn.createStatement();
             rs = st.executeQuery(sql);
 
