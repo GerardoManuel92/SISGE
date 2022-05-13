@@ -1,6 +1,7 @@
 package Interfaces;
 
 import conexion.Conectar;
+import java.awt.HeadlessException;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -158,36 +159,7 @@ public class FrmLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcb_perfilesActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        
-    }
+    
 
     public void MostrarRoles() throws SQLException {
         st = conn.createStatement();
@@ -226,25 +198,32 @@ public class FrmLogin extends javax.swing.JFrame {
 
             if (rs.next()) {
                 JOptionPane.showMessageDialog(null, "Bienvenido(a) \n" + rs.getString("nombre") + " " + rs.getString("paterno") + " " + rs.getString("materno"));
-                if (jcb_perfiles.getSelectedIndex() == 1) {
-                    FrmUsuarios usuarios = new FrmUsuarios();
-                    usuarios.setVisible(true);
-                    usuarios.lbl_nombre.setText(rs.getString("nombre") + " " + rs.getString("paterno") + " " + rs.getString("materno"));
-                    this.dispose();
-                } else if (jcb_perfiles.getSelectedIndex() == 2) {
-                    
-                } else if (jcb_perfiles.getSelectedIndex() == 3) {
-                     FrmPrincipalEncargado encargado = new FrmPrincipalEncargado();
-                     encargado.setVisible(true);
-                    this.dispose();
-                } else if (jcb_perfiles.getSelectedIndex() == 4) {
-                   
+                switch (jcb_perfiles.getSelectedIndex()) {
+                    case 1 -> {
+                        FrmUsuarios usuarios = new FrmUsuarios();
+                        usuarios.setVisible(true);
+                        usuarios.lbl_nombre.setText(rs.getString("nombre"));
+                        usuarios.lbl_paterno.setText(rs.getString("paterno"));
+                        usuarios.lbl_materno.setText(rs.getString("materno"));
+                        this.dispose();
+                    }
+                    case 2 -> {
+                    }
+                    case 3 -> {
+                        FrmPrincipalEncargado encargado = new FrmPrincipalEncargado();
+                        encargado.setVisible(true);
+                        this.dispose();
+                    }
+                    case 4 -> {
+                    }
+                    default -> {
+                    }
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Usuario y contraseña incorrectos", "Datos Incorrectos", JOptionPane.ERROR_MESSAGE);
             }
 
-        } catch (Exception e) {
+        } catch (HeadlessException | SQLException e) {
             JOptionPane.showMessageDialog(null, "Error de conexion " + e.getMessage());
         }
 

@@ -40,6 +40,11 @@ public class FrmUsuarios extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lbl_nombre = new javax.swing.JLabel();
         btn_generar = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        lbl_paterno = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        lbl_materno = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_registros = new javax.swing.JTable();
@@ -62,6 +67,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
         txt_password2 = new javax.swing.JPasswordField();
         jLabel12 = new javax.swing.JLabel();
         txt_busqueda = new javax.swing.JTextField();
+        btn_generar1 = new javax.swing.JButton();
 
         jLabel5.setText("Apellido Paterno:");
 
@@ -82,6 +88,12 @@ public class FrmUsuarios extends javax.swing.JFrame {
             }
         });
 
+        jLabel13.setText("Nombre:");
+
+        jLabel14.setText("Paterno");
+
+        jLabel15.setText("Materno");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -93,22 +105,42 @@ public class FrmUsuarios extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lbl_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel13)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel14)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_paterno, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel15)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_materno, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addGap(62, 62, 62)
-                .addComponent(lbl_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel13)
+                    .addComponent(lbl_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel14)
+                    .addComponent(lbl_paterno, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_materno, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addGap(30, 30, 30)
                 .addComponent(btn_generar)
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         tbl_registros.setModel(new javax.swing.table.DefaultTableModel(
@@ -261,13 +293,26 @@ public class FrmUsuarios extends javax.swing.JFrame {
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
+        btn_generar1.setBackground(new java.awt.Color(0, 204, 204));
+        btn_generar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btn_generar1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_generar1.setText("CERRAR SESION");
+        btn_generar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btn_generar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_generar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_generar1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(34, Short.MAX_VALUE))
@@ -279,6 +324,8 @@ public class FrmUsuarios extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(btn_generar1)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -310,6 +357,22 @@ public class FrmUsuarios extends javax.swing.JFrame {
     private void btn_generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generarActionPerformed
         jPanel2.setVisible(true);
     }//GEN-LAST:event_btn_generarActionPerformed
+
+    private void btn_generar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generar1ActionPerformed
+        int s = JOptionPane.showConfirmDialog(null, "¿Deseas cerrar tu sesion?", "CONFIRMACION", 0);
+            if (s == 0) {                
+                JOptionPane.showMessageDialog(null, "Sesion finalizada");               
+                
+            try {
+                FrmLogin login = new FrmLogin();
+                login.setVisible(true);
+                this.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(FrmUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }                
+                                
+            }
+    }//GEN-LAST:event_btn_generar1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -395,17 +458,17 @@ public class FrmUsuarios extends javax.swing.JFrame {
                 pst.setString(5, password);
                 pst.setInt(6, rol);
                 pst.executeUpdate();
-                pst = conn.prepareStatement("SELECT MAX(id) as id from usuarios");
+                pst = conn.prepareStatement("SELECT MAX(id_usuario) as id from usuarios");
                 rs = pst.executeQuery();
                 if (rs.next()) {
-                    id_usuario = rs.getString(String.valueOf("id"));
+                    id_usuario = rs.getString(String.valueOf("id_usuario"));
                 }
                 JOptionPane.showMessageDialog(null, "Registro Guardado correctamente, ID asignado " + id_usuario);
                 Limpiar();
                 MostrarRegistros("");
             }
         } catch (HeadlessException | SQLException e) {
-            JOptionPane.showMessageDialog(null, "Surgio un error " + e, "ERROR DE REGISTRO", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Surgio un error " + e.getMessage(), "ERROR DE REGISTRO", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -459,8 +522,8 @@ public class FrmUsuarios extends javax.swing.JFrame {
                 puestos[4] = rs.getString(5);
                 puestos[5] = rs.getString(6);
                 puestos[6] = rs.getString(7);
-                puestos[8] = btnm;
-                puestos[9] = btne;
+                puestos[7] = btnm;
+                puestos[8] = btne;
                 modelo.addRow(puestos);
             }
             tbl_registros.setModel(modelo);
@@ -492,7 +555,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
         String id = tbl_registros.getValueAt(fila, 0).toString();
         //Object id = btne;
         try {
-            pst = conn.prepareStatement("DELETE FROM usuarios WHERE id='" + id + "'");
+            pst = conn.prepareStatement("DELETE FROM usuarios WHERE id_usuario='" + id + "'");
             int s = JOptionPane.showConfirmDialog(null, "¿Estas seguro de eliminar el registro?", "CONFIRMACION", 0);
             if (s == 0) {
                 pst.executeUpdate();
@@ -568,10 +631,14 @@ public class FrmUsuarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_crear;
     private javax.swing.JButton btn_generar;
+    private javax.swing.JButton btn_generar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -587,7 +654,9 @@ public class FrmUsuarios extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JComboBox<String> jcb_roles;
     private javax.swing.JLabel lbl_idrol;
+    public javax.swing.JLabel lbl_materno;
     public javax.swing.JLabel lbl_nombre;
+    public javax.swing.JLabel lbl_paterno;
     private javax.swing.JTable tbl_registros;
     private javax.swing.JTextField txt_busqueda;
     private javax.swing.JTextField txt_materno;
